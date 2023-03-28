@@ -171,7 +171,7 @@ sequelize.sync({ alter: true }).then(async () => {
     // retrieve all transactions
     const transactions = await Transaction.findAll(
         {
-            where: { employeeId: 1 },
+            // where: { employeeId: 1 },
             include: [Employee, TransactionTypeA, TransactionTypeB]
         }
     );
